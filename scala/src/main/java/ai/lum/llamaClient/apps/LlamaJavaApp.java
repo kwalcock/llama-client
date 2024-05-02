@@ -1,3 +1,5 @@
+package ai.lum.llamaClient.apps;
+
 public class LlamaJavaApp {
 	
 	public static void main(String[] args) {
