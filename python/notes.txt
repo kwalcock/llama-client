@@ -1,4 +1,7 @@
-#47 positive
+# Output from Mac
+
+## Interview 47 positive
+
 Planting Event
 
 tiny: [{"crop": "grain sorghum", "date": "2021"}]
@@ -11,7 +14,7 @@ Time for tiny: 9.396805047988892
 Time for short: 51.68307685852051
 
 
-#61 negative
+## Interview 61 negative
 Planting Event
 
 tiny: [{"crop": null, "date": null}]
@@ -24,7 +27,7 @@ Time for tiny: 8.754755973815918
 Time for short: 59.992209911346436
 
 
-#61 positive
+## Interview 61 positive
 Yield Event
 
 tiny: [{"amount": "5", "units": "round bales per acre", "description": "First cutting, 800 pound bales"}]
@@ -41,3 +44,19 @@ Time for tiny: 12.032859802246094
 {"amount": "600", "units": "pound per acre", "description": "First cutting grass hay yield"},
 {"amount": "300", "units": "pound per acre", "description": "Second cutting grass hay yield"}]
 Time for short: 78.8733229637146
+
+# Output from Linux
+
+ [{"crop": "grain sorghum", "date": "2021"}]
+Time for tiny: 17.67407488822937
+ [{"crop": "sorghum", "date": "2021"}, {"crop": "cotton", "date": "2022"}, {"crop": "sorghum", "date": "2023"}]
+Time for short: 117.61173343658447
+ [{"crop": null, "date": null}]
+Time for tiny: 17.897638082504272
+ [{"crop": "corn", "date": "early May"}, {"crop": "alfalfa", "cutting_number": 1, "first_cutting_start_date": "middle of June 15th through the 20th"}, {"crop": "alfalfa", "cutting_number": 2, "second_cutting_start_date": "middle of August around the 15th"}, {"crop": "grass hay", "cutting_number": 1, "first_cutting_start_date": "middle of June 15th through the 20th"}, {"crop": "grass hay", "cutting_number": 2, "second_cutting_start_date": "middle of August around the 15th"}]
+Time for short: 128.60036897659302
+ [{"amount": "5", "units": "round bales per acre", "description": "First cutting, 800 pound bales"}]
+Time for tiny: 21.327383279800415
+ [{"amount": "2200", "units": "ton", "description": "Wet yield with 65% moisture"}]
+Time for short: 97.07691144943237
+
