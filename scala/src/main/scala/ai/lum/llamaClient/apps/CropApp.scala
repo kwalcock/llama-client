@@ -8,7 +8,7 @@ import scala.io.Source
 import scala.util.Using
 
 object CropApp extends App {
-  val modelFilename = "/Users/kwa/.cache/huggingface/hub/models--TheBloke--openchat-3.5-0106-GGUF/blobs/36a74fec42da7c3fc2614ce3444a99868647342ff4789f0e0d82882d7735aab5"
+  val modelFilename = "../../models/openchat-3.5-0106.Q5_K_M.gguf"
   val grammarFilename = "./src/main/resources/json.gbnf"
 
   val modelParams = new ModelParameters()
