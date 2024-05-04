@@ -36,7 +36,7 @@ public class LlamaJavaApp {
 				System.out.print("Llama: ");
 				prompt += "\nLlama: ";
 				InferenceParameters inferParams = new InferenceParameters(prompt)
-						.setTemperature(0.7f)
+						.setTemperature(0.0f)
 						.setPenalizeNl(true)
 						.setMiroStat(MiroStat.V2)
 						.setStopStrings("User:");

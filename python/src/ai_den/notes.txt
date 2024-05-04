@@ -1,0 +1,43 @@
+#47 positive
+Planting Event
+
+tiny: [{"crop": "grain sorghum", "date": "2021"}]
+short: [{"crop": "sorghum", "date": "2021"}, {"crop": "cotton", "date": "2022"}, {"crop": "sorghum", "date": "2023"}]
+long: Requested tokens (10170) exceed context window of 8192
+Note that these are tokens rather than characters
+
+Time for tiny: 9.396805047988892
+ [{"crop": "sorghum", "date": "2021"}, {"crop": "cotton", "date": "2022"}, {"crop": "sorghum", "date": "2023"}]
+Time for short: 51.68307685852051
+
+
+#61 negative
+Planting Event
+
+tiny: [{"crop": null, "date": null}]
+short:  [{"crop": "corn", "date": "early May"}, {"crop": "alfalfa", "cuttings": 4, "yield": {"wet_tonnes": 2200, "moisture": 65}}, {"crop": "grass hay", "cuttings": 2, "yield": {"dry_pounds_per_acre_first_cutting": 800, "dry_pounds_per_acre_second_cutting": 300}}]
+long:
+Note that these are tokens rather than characters
+
+Time for tiny: 8.754755973815918
+ [{"crop": "corn", "date": "early May"}, {"crop": "alfalfa", "cuttings": 4, "yield": {"wet_tonnes": 2200, "moisture": 65}}, {"crop": "grass hay", "cuttings": 2, "yield": {"dry_pounds_per_acre_first_cutting": 800, "dry_pounds_per_acre_second_cutting": 300}}]
+Time for short: 59.992209911346436
+
+
+#61 positive
+Yield Event
+
+tiny: [{"amount": "5", "units": "round bales per acre", "description": "First cutting, 800 pound bales"}]
+short:  [{"description": "A measurement of yield.", "properties": {"amount": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "The numerical value representing the yield."}, "units": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "The units used to measure the yield amount, incorporating relevant qualifiers that describe the yield's characteristics or specifications."}, "description": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "Additional descriptors or specifications associated with the yield, such as weight or quality indicators."}}, "type": "object"},
+{"amount": "2200", "units": "ton wet", "description": "Wet yield of alfalfa"},
+{"amount": "600", "units": "pound per acre", "description": "First cutting grass hay yield"},
+{"amount": "300", "units": "pound per acre", "description": "Second cutting grass hay yield"}]
+long:
+Note that these are tokens rather than characters
+
+Time for tiny: 12.032859802246094
+ [{"description": "A measurement of yield.", "properties": {"amount": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "The numerical value representing the yield."}, "units": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "The units used to measure the yield amount, incorporating relevant qualifiers that describe the yield's characteristics or specifications."}, "description": {"anyOf": [{"type": "string"}, {"type": "null"}], "default": null, "description": "Additional descriptors or specifications associated with the yield, such as weight or quality indicators."}}, "type": "object"},
+{"amount": "2200", "units": "ton wet", "description": "Wet yield of alfalfa"},
+{"amount": "600", "units": "pound per acre", "description": "First cutting grass hay yield"},
+{"amount": "300", "units": "pound per acre", "description": "Second cutting grass hay yield"}]
+Time for short: 78.8733229637146

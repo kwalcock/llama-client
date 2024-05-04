@@ -13,5 +13,6 @@ ThisBuild / scalaVersion := scala212
 name := "llama-client"
 
 libraryDependencies ++= Seq(
-  "de.kherud" % "llama" % "3.0.1"
+  "de.kherud"               % "llama"                    % "3.0.1",
+  "org.scala-lang.modules" %% "scala-collection-compat"  % "2.11.0"
 )
