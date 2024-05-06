@@ -48,9 +48,9 @@ Your role is crucial in supporting informed decision-making in the agricultural 
 def extract_objects(text, data_class):
     example = docstring_parser.parse(inspect.getdoc(data_class)).examples[0].description
     prompt = template.format(text=text, schema=json_schema(data_class), example=example)
-    # print("*******************************")
+    print("*******************************")
     # print(prompt)
-    # print("*******************************")
+    print("*******************************")
     output = model(prompt, verbose=True, json_mode=True)
     return from_json(data_class, output)
 
@@ -107,67 +107,62 @@ class Yield:
 
 # This is interview 47
 
-text = """
-<speaker_1> Okay. Very cool. So the 2021 was probably grain sorghum then? 
-<speaker_2> Yeah. 21 would've been grain sorghum. Yeah.
-"""
+# text = """
+# <speaker_1> Okay. Very cool. So the 2021 was probably grain sorghum then? 
+# <speaker_2> Yeah. 21 would've been grain sorghum. Yeah.
+# """
+# with open("../../corpora/47-tiny-BarryEvans.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/47-5-BarryEvans.txt", encoding="utf8") as file: text = file.read()
+with open("../../corpora/47-short-BarryEvans.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/47-BarryEvans.txt", encoding="utf8") as file: text = file.read()
 
 
 start = time.time()
 extract_objects(text, PlantingEvent)
 end = time.time()
-print("Time for tiny:", end - start)
-
-
-file_47 = "../../corpora/47-short-BarryEvans.txt"
-with open(file_47, encoding="utf8") as file: text_47 = file.read()
-start = time.time()
-extract_objects(text_47, PlantingEvent)
-end = time.time()
-print("Time for short:", end - start)
+print("Elapsed time:", end - start)
 
 
 # Cell 7
 
 # This is interview 61
 
-text = """
-<speaker_1> Yes.
-<speaker_2> All right. And do you have a yield for that?
-<speaker_1> That's usually all over the board, depending on how much moisture we get, but let's see. Try to hit 5 round bales to the acre for first cutting and that would be 800 pound bales. 2, trying to make my brain learn. 
-<speaker_2> and we're giving you some math problems here.
-"""
+# text = """
+# <speaker_1> Yes.
+# <speaker_2> All right. And do you have a yield for that?
+# <speaker_1> That's usually all over the board, depending on how much moisture we get, but let's see. Try to hit 5 round bales to the acre for first cutting and that would be 800 pound bales. 2, trying to make my brain learn. 
+# <speaker_2> and we're giving you some math problems here.
+# """
+# with open("../../corpora/61-tiny-Wilds.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/61-5-Wilds.txt", encoding="utf8") as file: text = file.read()
+with open("../../corpora/61-short-Wilds.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/61-Wilds.txt", encoding="utf8") as file: text = file.read()
+
+
 
 start = time.time()
 extract_objects(text, PlantingEvent)
 end = time.time()
-print("Time for tiny:", end - start)
+print("Elapsed time:", end - start)
 
-
-file_61 = "../../corpora/61-short-Wilds.txt"
-with open(file_61, encoding="utf8") as file: text_61 = file.read()
-start = time.time()
-extract_objects(text_61, PlantingEvent)
-end = time.time()
-print("Time for short:", end - start)
 
 # Cell 8
 
 # This is interview 61
 
-text = """
-<speaker_1> Yes.
-<speaker_2> All right. And do you have a yield for that?
-<speaker_1> That's usually all over the board, depending on how much moisture we get, but let's see. Try to hit 5 round bales to the acre for first cutting and that would be 800 pound bales. 2, trying to make my brain learn. 
-<speaker_2> and we're giving you some math problems here.
-"""
+# text = """
+# <speaker_1> Yes.
+# <speaker_2> All right. And do you have a yield for that?
+# <speaker_1> That's usually all over the board, depending on how much moisture we get, but let's see. Try to hit 5 round bales to the acre for first cutting and that would be 800 pound bales. 2, trying to make my brain learn. 
+# <speaker_2> and we're giving you some math problems here.
+# """
+
+# with open("../../corpora/61-tiny-Wilds.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/61-5-Wilds.txt", encoding="utf8") as file: text = file.read()
+with open("../../corpora/61-short-Wilds.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/61-Wilds.txt", encoding="utf8") as file: text = file.read()
 
 start = time.time()
 extract_objects(text, Yield)
 end = time.time()
-print("Time for tiny:", end - start)
-
-start = time.time()
-extract_objects(text_61, Yield)
-end = time.time()
-print("Time for short:", end - start)
+print("Elapsed time:", end - start)
