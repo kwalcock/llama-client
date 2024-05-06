@@ -103,7 +103,7 @@ object CropApp extends App {
 
   Using.resource(model) { model =>
     prompts.foreach { prompt =>
-      val inferenceParameters = new InferenceParameters(prompt)
+      val inferenceParameters = new InferenceParameters("User: " + prompt)
         // verbose=True
         // .setStream(true) // for some reason this is private
         // json_mode=True
