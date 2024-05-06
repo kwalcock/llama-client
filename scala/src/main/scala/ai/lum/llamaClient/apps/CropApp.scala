@@ -13,7 +13,10 @@ object CropApp extends App {
 
   val modelParams = new ModelParameters()
       .setModelFilePath(modelFilename)
-      .setNGpuLayers(43)
+      .setNCtx(8192)
+      .setNThreads(8)
+      .setNGpuLayers(-1)
+      // logits?
       .setDisableLog(true)
   val model = new LlamaModel(modelParams)
   val grammar = Using.resource(Source.fromFile(grammarFilename)(StandardCharsets.UTF_8)) { source =>
