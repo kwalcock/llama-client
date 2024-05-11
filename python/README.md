@@ -8,6 +8,7 @@ The directory structure of the overall project is intended to look like this:
   * corpora
   * llama-client
     * python
+      * notebooks
       * pyproject.toml
     * scala
   * models
@@ -30,10 +31,11 @@ Here are the steps that can create such a structure:
   * source venv/bin/activate (for Lin/Mac)
   * ./venv/Scripts/activate (for Win)
   * cd llama-client/python
-  * pip3 install .
+  * pip3 install -e . # editable mode
 * [Install llama_cpp_python](https://llama-cpp-python.readthedocs.io/en/latest/install)
   * pip3 install llama-cpp-python
 * Download the model
   * python3 src/download_model.py
 * Run other programs
   * python3 src/crops.py
+  * jupyter notebook # try notebooks/crops.ipynb
