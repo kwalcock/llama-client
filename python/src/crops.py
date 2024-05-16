@@ -16,7 +16,7 @@ model_path
 
 from ai_den.llama_cpp import LlamaCpp
 
-model = LlamaCpp(model_path)
+model = LlamaCpp(model_path, n_ctx=81920, n_gpu_layers=4)
 
 # Cell 3
 
@@ -112,8 +112,8 @@ class Yield:
 # <speaker_2> Yeah. 21 would've been grain sorghum. Yeah.
 # """
 # with open("../../corpora/47-tiny-BarryEvans.txt", encoding="utf8") as file: text = file.read()
-# with open("../../corpora/47-5-BarryEvans.txt", encoding="utf8") as file: text = file.read()
-with open("../../corpora/47-short-BarryEvans.txt", encoding="utf8") as file: text = file.read()
+with open("../../corpora/47-5-BarryEvans.txt", encoding="utf8") as file: text = file.read()
+# with open("../../corpora/47-short-BarryEvans.txt", encoding="utf8") as file: text = file.read()
 # with open("../../corpora/47-BarryEvans.txt", encoding="utf8") as file: text = file.read()
 
 
